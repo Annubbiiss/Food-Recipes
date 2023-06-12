@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.MealBottomSheetFragment">
+
+
+    <TextView
+        android:id="@+id/tv_btm_sheet_meal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myfont"
+        android:text="Meal Name"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/g_black"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/linear_btm_sheet"
+        app:layout_constraintTop_toBottomOf="@id/linear_btm_sheet"
+         />
+
+    <TextView
+        android:id="@+id/see_all_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myfont"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/g_black"
+        android:text="See More ..."
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/tv_btm_sheet_meal_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_btm_sheet_meal_name" />
+
+    <ImageView
+        android:id="@+id/img_btm_sheet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:id = "@+id/linear_btm_sheet"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_btm_sheet"
+        android:layout_margin="5dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_btm_sheet_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Category : "
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/g_black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:drawableLeftCompat="@drawable/ic_categories" />
+
+        <TextView
+            android:id="@+id/tv_btm_sheet_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Area : "
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/g_black"
+            android:textSize="17sp"
+            app:drawableLeftCompat="@drawable/area"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

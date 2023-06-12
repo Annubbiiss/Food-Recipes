@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppBottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle" >
+            @style/AppModuleStyle
+        </item>
+    </style>
+    <style name="AppModuleStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">
+            @drawable/rounded_shape
+        </item>
+    </style>
+</resources>
