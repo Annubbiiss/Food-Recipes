@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.easyfood.R
 import com.example.easyfood.adapters.MealsAdapter
 import com.example.easyfood.ui.activities.MainActivity
 import com.example.easyfood.ui.activities.MealActivity
@@ -46,6 +48,7 @@ private lateinit var mealsAdapter: MealsAdapter
         onSearchTextChange()
        onSearchClick()
         onsearchedItemClick()
+        onBackIconClick()
     }
 
     private fun onSearchTextChange() {
@@ -95,6 +98,12 @@ private lateinit var mealsAdapter: MealsAdapter
             startActivity(intent)
 
 
+        }
+    }
+
+    private fun onBackIconClick() {
+        binding.imgSearch.setOnClickListener {
+            findNavController().navigate(R.id.action_searchFragment_to_homeFragment)
         }
     }
 
